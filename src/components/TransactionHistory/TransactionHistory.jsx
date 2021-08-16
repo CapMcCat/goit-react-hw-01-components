@@ -6,18 +6,18 @@ const TransactionHistory = ({ items }) => {
     <table className={s.transactionHistory}>
       <thead>
         <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+          <th className={s.tableHeading}>Type</th>
+          <th className={s.tableHeading}>Amount</th>
+          <th className={s.tableHeading}>Currency</th>
         </tr>
       </thead>
 
       <tbody>
-        {items.map(({ id, type, amount, currency }) => (
-          <tr key={id}>
-            <td>{type}</td>
-            <td>{amount}</td>
-            <td>{currency}</td>
+        {items.map(({ id, type, amount, currency }, idx) => (
+          <tr key={id} className={idx % 2 === 0 ? s.unColored : s.colored}>
+            <td className={s.tableData}>{type}</td>
+            <td className={s.tableData}>{amount}</td>
+            <td className={s.tableData}>{currency}</td>
           </tr>
         ))}
       </tbody>
@@ -40,4 +40,5 @@ TransactionHistory.propTypes = {
     })
   ),
 };
+
 export default TransactionHistory;

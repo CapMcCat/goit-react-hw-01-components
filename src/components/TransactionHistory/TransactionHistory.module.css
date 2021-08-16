@@ -1,0 +1,19 @@
+.transactionHistory{
+    margin: auto;
+    border-collapse: collapse;
+    
+}
+
+.tableHeading,
+.tableData {
+  padding: 10px;
+  border: 1px solid #2a2a2a;
+}
+
+.unColored{
+    background-color: #fff;
+}
+
+.colored{
+    background-color: rgb(177, 177, 177);
+}
